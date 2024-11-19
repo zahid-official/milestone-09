@@ -1,15 +1,15 @@
+import AboutSection from "../Components/AboutSection";
 import Banner from "../Components/Banner";
-import Navbar from "../Components/Navbar";
+import Title from "../Components/Title";
 
 const Home = () => {
   return (
     <div>
-      <header>
-        <nav className="w-11/12 mx-auto py-4">
-          <Navbar></Navbar>
-        </nav>
-        <Banner></Banner>
-      </header>
+      <Banner></Banner>
+
+      <Title section={'About Elex'} heading1={'Upgrade your learning Skills'} heading2={'and Upgrade Life'}></Title>
+      <AboutSection></AboutSection>
+
     </div>
   );
 };
