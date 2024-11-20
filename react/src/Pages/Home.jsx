@@ -1,9 +1,10 @@
 import AboutSection from "../Components/AboutSection";
 import Banner from "../Components/Banner";
-import FeadbackSection from "../Components/FeadbackSection";
+import FeedbackSection from "../Components/FeedbackSection";
 import FeatureSection from "../Components/FeatureSection";
 import SuccessSection from "../Components/SuccessSection";
 import Title from "../Components/Title";
+import JoinSection from "../Components/JoinSection";
 
 const Home = () => {
   return (
@@ -40,12 +41,15 @@ const Home = () => {
         <FeatureSection></FeatureSection>
       </section>
 
-      {/* Feadback Section */}
+      {/* feedback Section */}
       <section className="bg-[#eef5f7] mt-10 py-16">
-        <FeadbackSection></FeadbackSection>
+        <FeedbackSection></FeedbackSection>
       </section>
 
-      
+      {/* Join Us */}
+      <section>
+        <JoinSection></JoinSection>
+      </section>
     </div>
   );
 };

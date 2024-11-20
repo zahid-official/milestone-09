@@ -24,10 +24,10 @@ const SliderSection = () => {
           clickable: true,
         }}
         modules={[Pagination, Mousewheel, Autoplay]}
-        className="mySwiper h-[650px]"
+        className="mySwiper xl:h-[600px] lg:h-[680px] sm:h-[640px] h-[820px]"
       >
         {/* slider-01 */}
-        <SwiperSlide className=" p-8">
+        <SwiperSlide className="">
           <div>
             <div className="bg-white px-8 py-12 rounded-br-3xl rounded-t-3xl space-y-3">
               <h3 className="text-2xl text-[#0683a2] font-bold">
@@ -50,7 +50,7 @@ const SliderSection = () => {
         </SwiperSlide>
 
         {/* slider-02 */}
-        <SwiperSlide className=" p-8">
+        <SwiperSlide className="">
           <div>
             <div className="bg-white px-8 py-12 rounded-br-3xl rounded-t-3xl space-y-3">
               <h3 className="text-2xl text-[#0683a2] font-bold">
@@ -71,7 +71,7 @@ const SliderSection = () => {
         </SwiperSlide>
 
         {/* slider-03 */}
-        <SwiperSlide className=" p-8">
+        <SwiperSlide className="">
           <div>
             <div className="bg-white px-8 py-12 rounded-br-3xl rounded-t-3xl space-y-3">
               <h3 className="text-2xl text-[#0683a2] font-bold">
@@ -94,7 +94,7 @@ const SliderSection = () => {
         </SwiperSlide>
 
         {/* slider-04 */}
-        <SwiperSlide className=" p-8">
+        <SwiperSlide className="">
           <div>
             <div className="bg-white px-8 py-12 rounded-br-3xl rounded-t-3xl space-y-3">
               <h3 className="text-2xl text-[#0683a2] font-bold">
