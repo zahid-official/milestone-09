@@ -1,9 +1,10 @@
+import PageTitle from "../Components/Learn/PageTitle";
 
 
 const Learn = () => {
     return (
         <div>
-            learn
+            <PageTitle pageTitle={`Let's Learn`}></PageTitle>
         </div>
     );
 };
