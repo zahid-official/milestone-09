@@ -17,6 +17,11 @@ const Router = createBrowserRouter([
       {
         path: "/learn",
         element: <Learn></Learn>,
+        loader: ()=> fetch('./categories.json'),
+      },
+      {
+        path: "/learn/lesson/:id",
+        element: <h2>Dynamic Route</h2>,
       },
       {
         path: "/tutorials",
