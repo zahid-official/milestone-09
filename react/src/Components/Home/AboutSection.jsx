@@ -1,14 +1,23 @@
+import { useEffect } from "react";
 import photo01 from "/assets/photo01.png";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const AboutSection = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1200,
+      easing: 'ease-in-out-back',
+    });
+  }, []);
   return (
     <>
       <div className="hero">
-        <div className="hero-content gap-8 flex-col lg:flex-row-reverse">
+        <div className="hero-content gap-8 flex-col lg:flex-row-reverse"  data-aos="fade-left">
           <img
             src={photo01}
           />
-          <div>
+          <div  data-aos="fade-right">
             <h1 className="sm:text-4xl text-2xl font-bold">We Are <span className="text-[#098b99]">Elex!</span> The Best Online Learning Platform</h1>
             <p className="py-6">
             Elexs mission is to make language learning accessible, engaging, and effective for everyone. We provide personalized lessons, interactive tools, and a supportive community to help users master new languages, build confidence, and break down communication barriers.

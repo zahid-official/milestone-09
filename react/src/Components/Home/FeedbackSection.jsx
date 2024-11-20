@@ -1,10 +1,20 @@
 import SliderSection from "./SliderSection";
 import feedback from "/assets/feedback-01.png";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 const FeedbackSection = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1200,
+      easing: "ease",
+      once: true,
+    });
+  }, []);
   return (
     <div className="flex lg:flex-row flex-col gap-10 w-11/12 mx-auto py-16">
-      <div className="flex-1">
+      <div data-aos="zoom-in-right" className="flex-1">
         <img src={feedback} alt="" />
       </div>
 
