@@ -10,14 +10,14 @@ body{
 
 a.active{
     color: white !important;
-    background-image: linear-gradient(to right bottom, #6bc17e, #0c8c98);
+    background-image: linear-gradient(to right bottom, #6bc17e, #0c8c97);
 }
 
 .custom-btn{
     color: white;
-    background-image: linear-gradient(to right bottom, #6bc17e, #0c8c98);
+    background-image: linear-gradient(to right bottom, #6bc17e, #0c8c97);
 }
 
 .custom-gradient{
-    background-image: linear-gradient(to right bottom, #6bc17e, #0c8c98);;
+    background-image: linear-gradient(to right bottom, #6bc17e, #0c8c97);;
 }

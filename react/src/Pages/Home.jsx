@@ -9,7 +9,10 @@ import JoinSection from "../Components/JoinSection";
 const Home = () => {
   return (
     <div>
-      <Banner></Banner>
+      {/* Banner Section */}
+      <section>
+        <Banner></Banner>
+      </section>
 
       {/* About Section */}
       <section>

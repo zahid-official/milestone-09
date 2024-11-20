@@ -16,7 +16,7 @@ const JoinSection = () => {
             <p className="py-6">
             Join a global community of instructors who are shaping the future of learning on Elex. With our powerful tools and expert resources, you can teach what you love and make a lasting impact. Achieve your dreams and inspire your journey starts here!
             </p>
-            <button className="btn custom-btn mt-5">Get Started</button>
+            <button className="btn custom-btn mt-5 text-xl h-14 sm:px-16">Get Started</button>
           </div>
         </div>
       </div>

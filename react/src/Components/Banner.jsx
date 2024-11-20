@@ -30,7 +30,7 @@ const Banner = () => {
                     instructors, and unlock your full potential as you embark on
                     your language journey.
                   </p>
-                  <button className="btn bg-[#098a9b] hover:bg-[#18717c] text-white text-base border-none px-8">
+                  <button className="btn bg-[#098a9b] hover:bg-[#18717c] text-white text-xl h-14 sm:px-16 border-none px-8"> 
                     Get Started
                   </button>
                 </div>
@@ -59,7 +59,7 @@ const Banner = () => {
                     interactive tools, and a global community. Start today and
                     unlock your potential!
                   </p>
-                  <button className="btn bg-[#098a9b] hover:bg-[#18717c] text-white text-base border-none px-8">
+                  <button className="btn bg-[#098a9b] hover:bg-[#18717c] text-white text-xl h-14 sm:px-16 border-none px-8">
                     Get Started
                   </button>
                 </div>
@@ -92,7 +92,7 @@ const Banner = () => {
                     instructors, and unlock your true potential as you embark on
                     your language learning path.
                   </p>
-                  <button className="btn bg-[#098a9b] hover:bg-[#18717c] text-white text-base border-none px-8">
+                  <button className="btn bg-[#098a9b] hover:bg-[#18717c] text-white text-xl h-14 sm:px-16 border-none px-8">
                     Get Started
                   </button>
                 </div>

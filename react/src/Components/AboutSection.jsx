@@ -14,7 +14,7 @@ const AboutSection = () => {
             Elexs mission is to make language learning accessible, engaging, and effective for everyone. We provide personalized lessons, interactive tools, and a supportive community to help users master new languages, build confidence, and break down communication barriers.
             </p>
             <p>To learn vocabulary, Elex offers a range of methods, including flashcards, spaced repetition, and context-based exercises. These techniques allow users to effectively memorize and apply new words in real-life situations. The platform adapts to each users progress, ensuring efficient vocabulary building and long-term retention.</p>
-            <button className="btn custom-btn mt-5">Get Started</button>
+            <button className="btn custom-btn mt-5 text-xl h-14 sm:px-16">Get Started</button>
           </div>
         </div>
       </div>

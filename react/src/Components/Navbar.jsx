@@ -1,12 +1,23 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
+import logo from "/assets/logo.png";
 
 const Navbar = () => {
-    const links = <>
-    <li className="text-base font-semibold mx-0.5"><NavLink to={'/'}>Home</NavLink></li>
-    <li className="text-base font-semibold mx-0.5"><NavLink to={'/learn'}>Start Learning</NavLink></li>
-    <li className="text-base font-semibold mx-0.5"><NavLink to={'/tutorials'}>Tutorials</NavLink></li>
-    <li className="text-base font-semibold mx-0.5"><NavLink to={'about'}>About Us</NavLink></li>
+  const links = (
+    <>
+      <li className="text-lg font-semibold mx-0.5 hover:text-[#0683a2]">
+        <NavLink to={"/"}>Home</NavLink>
+      </li>
+      <li className="text-lg font-semibold mx-0.5 hover:text-[#0683a2]">
+        <NavLink to={"/learn"}>Start Learning</NavLink>
+      </li>
+      <li className="text-lg font-semibold mx-0.5 hover:text-[#0683a2]">
+        <NavLink to={"/tutorials"}>Tutorials</NavLink>
+      </li>
+      <li className="text-lg font-semibold mx-0.5 hover:text-[#0683a2]">
+        <NavLink to={"about"}>About Us</NavLink>
+      </li>
     </>
+  );
 
   return (
     <>
@@ -36,13 +47,19 @@ const Navbar = () => {
               {links}
             </ul>
           </div>
-          <a className="btn btn-ghost text-4xl font-bold">Elex</a>
+          <p>
+            <Link to="/" className="flex gap-3 items-center text-4xl font-bold">
+              <img src={logo} alt="" /> <span className="mt-2">Elex</span>
+            </Link>
+          </p>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">{links}</ul>
         </div>
         <div className="navbar-end">
-          <a className="btn text-base px-8 custom-btn">Login</a>
+          <button className="btn custom-btn text-xl h-14 sm:px-16">
+            Login
+          </button>
         </div>
       </div>
     </>
