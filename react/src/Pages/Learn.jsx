@@ -2,12 +2,13 @@ import { useLoaderData } from "react-router-dom";
 import PageTitle from "../Components/Learn/PageTitle";
 import Category from "../Components/Learn/Category";
 import Title from "../Components/Home/Title";
-import EmbededSection from "../Components/Learn/EmbededSection";
+// import EmbededSection from "../Components/Learn/EmbededSection";
 
 
 const Learn = () => {
-    // loader Data from learn page
+    // loader Data for learn page
     const categories = useLoaderData();
+    
 
     return (
         <div>
@@ -23,7 +24,7 @@ const Learn = () => {
 
             {/*  Embeded Section */}
             <Title section={'Tutorial Section'} heading1={`Learning Japanese Language`}></Title>
-            <EmbededSection></EmbededSection>
+            {/* <EmbededSection></EmbededSection> */}
         </div>
     );
 };
