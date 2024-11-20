@@ -4,6 +4,7 @@ import Learn from "../Pages/Learn";
 import Tutorials from "../Pages/Tutorials";
 import About from "../Pages/About";
 import MainLayout from "../Layout/MainLayout";
+import Lesson from "../Components/Learn/Lesson";
 
 const Router = createBrowserRouter([
   {
@@ -21,7 +22,7 @@ const Router = createBrowserRouter([
       },
       {
         path: "/learn/lesson/:id",
-        element: <h2>Dynamic Route</h2>,
+        element: <Lesson></Lesson>,
       },
       {
         path: "/tutorials",
