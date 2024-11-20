@@ -1,5 +1,6 @@
 import AboutSection from "../Components/AboutSection";
 import Banner from "../Components/Banner";
+import FeatureSection from "../Components/FeatureSection";
 import SuccessSection from "../Components/SuccessSection";
 import Title from "../Components/Title";
 
@@ -26,6 +27,16 @@ const Home = () => {
           heading2={""}
         ></Title>
         <SuccessSection></SuccessSection>
+      </section>
+
+      {/* Feature Section */}
+      <section>
+        <Title
+          section={"Our Features"}
+          heading1={"Why You Should Choose Elex"}
+          heading2={""}
+        ></Title>
+        <FeatureSection></FeatureSection>
       </section>
     </div>
   );
