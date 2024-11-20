@@ -243,14 +243,14 @@
       },
       {
         "id": "word023",
-        "word": "ありがとう",
-        "pronunciation": "arigatou",
-        "meaning": "thank you",
+        "word": "すみません",
+        "pronunciation": "sumimasen",
+        "meaning": "I'm sorry",
         "part_of_speech": "expression",
         "difficulty": "easy",
         "lesson_no": 1,
-        "when_to_say": "Used to express gratitude.",
-        "example": "ありがとう、助かりました。 (arigatou, tasukarimashita.) - Thank you, that was helpful."
+        "when_to_say": "Used to apologize or get someone's attention.",
+        "example": "すみません、道に迷いました。 (sumimasen, michi ni mayoimashita.) - Excuse me, I got lost."
       },
       {
         "id": "word024",

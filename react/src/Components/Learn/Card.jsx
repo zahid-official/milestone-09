@@ -24,24 +24,30 @@ const Card = ({ card }) => {
   useEffect(() => {
     if (difficulty === "easy") {
       setColor("bg-[#d3e3f0]");
-      setBtnColor("hover:bg-[#76a2c7] hover:text-white hover:border-none");
-    } 
-    else if (difficulty === "medium") {
+      setBtnColor("hover:bg-[#76a2c7] hover:text-white hover:border-transparent");
+    } else if (difficulty === "medium") {
       setColor("bg-[#ddd2f5]");
-      setBtnColor("hover:bg-[#9e7ddd] hover:text-white hover:border-none");
-    } 
-    else {
+      setBtnColor("hover:bg-[#9e7ddd] hover:text-white hover:border-transparent");
+    } else {
       setColor("bg-[#fad4d3]");
-      setBtnColor("hover:bg-[#fd7e7f] hover:text-white hover:border-none");
+      setBtnColor("hover:bg-[#fd7e7f] hover:text-white hover:border-transparent");
     }
   }, [difficulty]);
 
+  //pronounce
+  const pronounceWord = (word) => {
+    const utterance = new SpeechSynthesisUtterance(word);
+    utterance.lang = "ja-JP"; // Japanese
+    window.speechSynthesis.speak(utterance);
+  };
+
   return (
     <div>
-      <div className={`text-xl rounded-xl py-16 px-5 ${color}`}>
-        <div className="flex justify-center">
-          <img src="" alt="" />
-        </div>
+      <div
+        className={`text-xl rounded-xl py-16 px-5 hover:shadow-xl cursor-pointer lg:tooltip transition-all duration-300 ${color}`}
+        data-tip="Click Card for Pronunciation"
+        onClick={() => pronounceWord(pronunciation)}
+      >
         <div className="space-y-8">
           <h2 className="text-3xl font-bold text-center">{word}</h2>
           <div className="space-y-2">
@@ -64,9 +70,40 @@ const Card = ({ card }) => {
           </div>
         </div>
         <div className="text-center mt-10">
-            <button className={`btn btn-outline text-xl h-14 sm:px-16 ${btnColor}`}><AiFillSound/> When to Say</button>
+          <button
+            className={`btn btn-outline text-xl h-14 sm:px-16 ${btnColor}`}
+            onClick={() => document.getElementById("my_modal_5").showModal()}
+          >
+            <AiFillSound /> When to Say
+          </button>
         </div>
       </div>
+
+      {/* modal */}
+      <dialog id="my_modal_5" className="modal modal-bottom md:modal-middle">
+        <div className="modal-box space-y-4 text-lg">
+          <h2 className="text-3xl font-bold text-center pt-5">{word}</h2>
+          <p className="flex items-center gap-2">
+              <SiDictionarydotcom size={23}/>
+              Meaning: {meaning}
+            </p>
+
+            <p className="flex items-center gap-2">
+              <RiSpeakFill size={30} />
+              When to say: {when_to_say}
+            </p>
+
+            <p className="flex items-center gap-2">
+              Example: {example}
+            </p>
+          <div className="modal-action justify-center">
+            <form method="dialog">
+              {/* if there is a button in form, it will close the modal */}
+              <button className="btn custom-btn px-16">Close</button>
+            </form>
+          </div>
+        </div>
+      </dialog>
     </div>
   );
 };
