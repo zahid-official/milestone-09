@@ -1,10 +1,10 @@
-import AboutSection from "../Components/AboutSection";
-import Banner from "../Components/Banner";
-import FeedbackSection from "../Components/FeedbackSection";
-import FeatureSection from "../Components/FeatureSection";
-import SuccessSection from "../Components/SuccessSection";
-import Title from "../Components/Title";
-import JoinSection from "../Components/JoinSection";
+import AboutSection from "../Components/Home/AboutSection";
+import Banner from "../Components/Home/Banner";
+import FeedbackSection from "../Components/Home/FeedbackSection";
+import FeatureSection from "../Components/Home/FeatureSection";
+import SuccessSection from "../Components/Home/SuccessSection";
+import Title from "../Components/Home/Title";
+import JoinSection from "../Components/Home/JoinSection";
 
 const Home = () => {
   return (
