@@ -26,7 +26,7 @@ const ForgetPassword = () => {
           <h2 className="text-4xl mb-5 font-bold">Reset Password</h2>
           <div className="form-control">
             <label className="label">
-              <span className="label-text">Email</span>
+              <span className="label-text">Email </span>
             </label>
             <input
               type="email"
