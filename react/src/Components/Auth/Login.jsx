@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import AuthContext from "./context";
 import { toast } from "react-toastify";
 import { GoogleAuthProvider } from "firebase/auth";
@@ -7,7 +7,9 @@ import { FcGoogle } from "react-icons/fc";
 
 const Login = () => {
   // useContext
-  const { login, google } = useContext(AuthContext);
+  const { login, google, setUser } = useContext(AuthContext);
+  // useLocation
+  const location = useLocation();
   // useNavigate
   const navigate = useNavigate();
 
@@ -19,9 +21,10 @@ const Login = () => {
 
     // login
     login(email, password)
-      .then(() => {
+      .then((result) => {
+        setUser(result.user);
         toast.success("Login Successful");
-        navigate("/");
+        navigate(location?.state ? location.state : '/');
       })
       .catch((error) => toast.error(error.message));
   };
@@ -32,7 +35,7 @@ const Login = () => {
     google(googleProvider)
       .then(() => {
         toast.success("Sign In with Google Successful");
-        navigate("/");
+        navigate(location?.state ? location.state : '/');
       })
       .catch((error) => toast.error(error.message));
   };

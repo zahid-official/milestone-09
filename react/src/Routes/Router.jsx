@@ -7,6 +7,9 @@ import MainLayout from "../Layout/MainLayout";
 import Lesson from "../Components/Learn/Lesson";
 import Login from "../Components/Auth/Login";
 import Register from "../Components/Auth/Register";
+import PrivateRoutes from "./PrivateRoutes";
+import Profile from "../Pages/Profile";
+import UpdateProfile from "../Components/Profile/UpdateProfile";
 
 const Router = createBrowserRouter([
   {
@@ -24,7 +27,11 @@ const Router = createBrowserRouter([
       },
       {
         path: "/learn/lesson/:id",
-        element: <Lesson></Lesson>,
+        element: (
+          <PrivateRoutes>
+            <Lesson></Lesson>
+          </PrivateRoutes>
+        ),
         loader: () => fetch("/words.json"),
       },
       {
@@ -34,6 +41,22 @@ const Router = createBrowserRouter([
       {
         path: "/about",
         element: <About></About>,
+      },
+      {
+        path: "/profile",
+        element: (
+          <PrivateRoutes>
+            <Profile></Profile>
+          </PrivateRoutes>
+        ),
+      },
+      {
+        path: "/updateProfile",
+        element: (
+          <PrivateRoutes>
+            <UpdateProfile></UpdateProfile>
+          </PrivateRoutes>
+        ),
       },
       {
         path: "/login",

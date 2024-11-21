@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const EmbededSection = () => {
   return (
     <div className="grid gap-10 xl:grid-cols-3 lg:grid-cols-2 w-11/12 mx-auto pb-28">
@@ -14,9 +16,11 @@ const EmbededSection = () => {
           allowFullScreen
         />
         <div className="mt-6">
-          <button className="btn custom-btn text-xl h-14 sm:px-16">
-            View more
-          </button>
+          <Link to={"/tutorials"}>
+            <button className="btn custom-btn text-xl h-14 sm:px-16">
+              View more
+            </button>
+          </Link>
         </div>
       </div>
 
@@ -32,9 +36,11 @@ const EmbededSection = () => {
           allowfullscreen
         ></iframe>
         <div className="mt-6">
-          <button className="btn custom-btn text-xl h-14 sm:px-16">
-            View more
-          </button>
+          <Link to={"/tutorials"}>
+            <button className="btn custom-btn text-xl h-14 sm:px-16">
+              View more
+            </button>
+          </Link>
         </div>
       </div>
 
@@ -50,9 +56,11 @@ const EmbededSection = () => {
           allowfullscreen
         ></iframe>
         <div className="mt-6">
-          <button className="btn custom-btn text-xl h-14 sm:px-16">
-            View more
-          </button>
+          <Link to={"/tutorials"}>
+            <button className="btn custom-btn text-xl h-14 sm:px-16">
+              View more
+            </button>
+          </Link>
         </div>
       </div>
     </div>

@@ -1,7 +1,20 @@
 import { NavLink, Link } from "react-router-dom";
 import logo from "/assets/logo.png";
+import { useContext } from "react";
+import AuthContext from "./Auth/context";
+import { toast } from "react-toastify";
 
 const Navbar = () => {
+  // useContext
+  const { user, logOut } = useContext(AuthContext);
+
+  // signOut
+  const handleSignOut = () => {
+    logOut()
+      .then(() => toast.success("Sign Out Successful"))
+      .catch((error) => toast.error(error.message));
+  };
+
   const links = (
     <>
       <li className="text-lg font-semibold mx-0.5 hover:text-[#0683a2]">
@@ -14,8 +27,15 @@ const Navbar = () => {
         <NavLink to={"/tutorials"}>Tutorials</NavLink>
       </li>
       <li className="text-lg font-semibold mx-0.5 hover:text-[#0683a2]">
-        <NavLink to={"about"}>About Us</NavLink>
+        <NavLink to={"/about"}>About Us</NavLink>
       </li>
+      {user && (
+        <>
+          <li className="text-lg font-semibold mx-0.5 hover:text-[#0683a2]">
+            <NavLink to={"/profile"}>Profile</NavLink>
+          </li>
+        </>
+      )}
     </>
   );
 
@@ -57,12 +77,30 @@ const Navbar = () => {
           <ul className="menu menu-horizontal px-1">{links}</ul>
         </div>
 
-        <div className="navbar-end">
-          <Link to={'/login'}>
-            <button className="btn custom-btn text-xl h-14 sm:px-16">
-              Login
-            </button>
-          </Link>
+        <div className="navbar-end space-x-3">
+          {user && user?.email ? (
+            <>
+              <p className="text-xl font-bold">Hi, {user?.displayName}</p>
+              <img
+                className="h-10 rounded-full"
+                referrerPolicy="no-referrer"
+                src={user?.photoURL || user?.providerData?.photoURL}
+              />
+
+              <button
+                onClick={handleSignOut}
+                className="btn custom-btn text-xl h-14 sm:px-10"
+              >
+                Sign Out
+              </button>
+            </>
+          ) : (
+            <Link to={"/login"}>
+              <button className="btn custom-btn text-xl h-14 sm:px-16">
+                Login
+              </button>
+            </Link>
+          )}
         </div>
       </div>
     </>

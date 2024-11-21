@@ -7,7 +7,7 @@ import { GoogleAuthProvider } from "firebase/auth";
 
 const Register = () => {
   // useContext
-  const { register, setUser, google } = useContext(AuthContext);
+  const { register, setUser, google, profile } = useContext(AuthContext);
   // useNavigate
   const navigate = useNavigate();
 
@@ -19,8 +19,8 @@ const Register = () => {
     event.preventDefault();
 
     // get input data
-    // const name = event.target.name.value;
-    // const photo = event.target.photo.value;
+    const name = event.target.name.value;
+    const photo = event.target.photo.value;
     const email = event.target.email.value;
     const password = event.target.password.value;
 
@@ -38,10 +38,17 @@ const Register = () => {
     register(email, password)
       .then((result) => {
         setUser(result.user);
-        toast.success("Registration Successful");
-        navigate("/");
+        // update profile
+        profile({displayName:name, photoURL:photo})
+        .then(()=>{
+          setUser(result.user);
+          toast.success("Registration Successful");
+          navigate("/");
+        })
+        .catch(error => toast.error(error.message))
       })
-      .catch((error) => toast.error(error.message));
+
+      .catch((error) => toast.error(error.message))
   };
 
     // handleGoogle
