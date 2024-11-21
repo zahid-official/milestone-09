@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 const UpdateProfile = () => {
 
     // useContext
-    const {profile, setUser} = useContext(AuthContext);
+    const {profile, user, setUser} = useContext(AuthContext);
 
     // useNavigate
     const navigate = useNavigate();
@@ -20,9 +20,8 @@ const UpdateProfile = () => {
 
         // update profile
         profile({displayName:name, photoURL:photo})
-        .then(result=>{
-            console.log(result)
-            setUser(result.user);
+        .then(()=>{
+            setUser({...user, displayName:name, photoURL:photo});
             toast.success("Profile Update Successful");
             navigate('/profile');
           })

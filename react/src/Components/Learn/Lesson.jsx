@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useLoaderData, useParams } from "react-router-dom";
+import { Link, useLoaderData, useParams } from "react-router-dom";
 import Card from "./Card";
 import PageTitle from "./PageTitle";
 
@@ -17,7 +17,7 @@ const Lesson = () => {
     );
     setLesson(filtered);
   }, [data, id]);
-  
+
   return (
     <>
       <PageTitle
@@ -28,6 +28,14 @@ const Lesson = () => {
         {lesson.map((card) => (
           <Card key={card.id} card={card}></Card>
         ))}
+      </div>
+
+      <div className="pb-20 flex justify-center">
+        <Link to={"/learn"}>
+          <button className="btn text-lg px-16 h-14 custom-btn">
+            Back to Lesson
+          </button>
+        </Link>
       </div>
     </>
   );

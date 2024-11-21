@@ -2,6 +2,7 @@
 import {
   createUserWithEmailAndPassword,
   onAuthStateChanged,
+  sendPasswordResetEmail,
   signInWithEmailAndPassword,
   signInWithPopup,
   signOut,
@@ -15,9 +16,11 @@ import "react-toastify/dist/ReactToastify.css";
 
 const AuthProvider = ({ children }) => {
   // state for user
-  const [user, setUser] = useState([]);
+  const [user, setUser] = useState(null);
   // state for loading
   const [loading, setLoading] = useState(true);
+  //state for forget password
+  const [forget, setForget] = useState(null);
 
   // register
   const register = (email, password) => {
@@ -48,6 +51,11 @@ const AuthProvider = ({ children }) => {
     return updateProfile(auth.currentUser, updatedData);
   }
 
+  //send reset email
+  const resetEmail = (email)=>{
+    return sendPasswordResetEmail(auth, email);
+  }
+
   //observer
   useEffect(() => {
     const observer = onAuthStateChanged(auth, (userData) => {
@@ -70,7 +78,11 @@ const AuthProvider = ({ children }) => {
     google,
     logOut, 
     profile,
+    forget,
+    setForget,
+    resetEmail,
   };
+
 
   return (
     <div>

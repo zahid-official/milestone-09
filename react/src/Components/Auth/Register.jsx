@@ -41,7 +41,7 @@ const Register = () => {
         // update profile
         profile({displayName:name, photoURL:photo})
         .then(()=>{
-          setUser(result.user);
+          setUser({...result.user, displayName:name, photoURL:photo});
           toast.success("Registration Successful");
           navigate("/");
         })

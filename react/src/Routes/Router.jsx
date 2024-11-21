@@ -10,11 +10,14 @@ import Register from "../Components/Auth/Register";
 import PrivateRoutes from "./PrivateRoutes";
 import Profile from "../Pages/Profile";
 import UpdateProfile from "../Components/Profile/UpdateProfile";
+import ErrorPage from "../Pages/ErrorPage";
+import ForgetPassword from "../Components/Auth/ForgetPassword";
 
 const Router = createBrowserRouter([
   {
     path: "/",
     element: <MainLayout></MainLayout>,
+    errorElement: <ErrorPage></ErrorPage>,
     children: [
       {
         path: "/",
@@ -59,12 +62,16 @@ const Router = createBrowserRouter([
         ),
       },
       {
+        path: "/register",
+        element: <Register></Register>,
+      },
+      {
         path: "/login",
         element: <Login></Login>,
       },
       {
-        path: "/register",
-        element: <Register></Register>,
+        path: "/forget",
+        element: <ForgetPassword></ForgetPassword>
       },
     ],
   },

@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useRef } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import AuthContext from "./context";
 import { toast } from "react-toastify";
@@ -7,11 +7,13 @@ import { FcGoogle } from "react-icons/fc";
 
 const Login = () => {
   // useContext
-  const { login, google, setUser } = useContext(AuthContext);
+  const { login, google, setUser, setForget } = useContext(AuthContext);
   // useLocation
   const location = useLocation();
   // useNavigate
   const navigate = useNavigate();
+  // useRef
+  const emailRef = useRef();
 
   // handleSubmit
   const handleSubmit = (event) => {
@@ -28,6 +30,12 @@ const Login = () => {
       })
       .catch((error) => toast.error(error.message));
   };
+
+
+  // handle forget password
+   const handleForget = ()=> {
+    setForget(emailRef.current.value)
+   }
 
   // handleGoogle
   const handleGoogle = () => {
@@ -53,6 +61,7 @@ const Login = () => {
             </label>
             <input
               type="email"
+              ref={emailRef}
               name="email"
               placeholder="email"
               className="input input-bordered"
@@ -74,8 +83,8 @@ const Login = () => {
             />
 
             <label className="label">
-              <Link className="label-text-alt link link-hover mt-2">
-                Lost password?
+              <Link to={'/forget'} >
+                <button type="button" onClick={handleForget} className="label-text-alt link link-hover mt-2">Lost password?</button>
               </Link>
             </label>
           </div>
@@ -93,7 +102,7 @@ const Login = () => {
               onClick={handleGoogle}
               className="btn bg-black text-white text-lg font-bold h-14"
             >
-              <FcGoogle size={30} />{" "}
+              <FcGoogle size={30} />
               <span className="mt-1">Sign In with Google</span>
             </button>
           </div>
@@ -101,7 +110,7 @@ const Login = () => {
 
         <p className="text-center">
           {`Don't have an account?`}
-          <Link to={"/register"}>Sign up</Link>
+          <Link to={"/register"}><span className="underline">Sign up</span></Link>
         </p>
       </div>
     </div>
