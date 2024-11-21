@@ -56,10 +56,13 @@ const Navbar = () => {
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">{links}</ul>
         </div>
+
         <div className="navbar-end">
-          <button className="btn custom-btn text-xl h-14 sm:px-16">
-            Login
-          </button>
+          <Link to={'/login'}>
+            <button className="btn custom-btn text-xl h-14 sm:px-16">
+              Login
+            </button>
+          </Link>
         </div>
       </div>
     </>
