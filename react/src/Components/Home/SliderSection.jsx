@@ -1,4 +1,5 @@
 import { Pagination, Mousewheel, Autoplay } from "swiper/modules";
+import { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import reviewer01 from "/assets/reviewer-01.jpg";
 import reviewer02 from "/assets/reviewer-02.jpg";
@@ -8,13 +9,28 @@ import "swiper/css";
 import "swiper/css/bundle";
 
 const SliderSection = () => {
+  const [width, setWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWidth(window.innerWidth);
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
+
   return (
     <div>
       <Swiper
+        mousewheel={width > 1023? true : false}
         slidesPerView={2}
         spaceBetween={30}
         loop={true}
-        mousewheel={true}
         autoplay={{
           delay: 2000,
           disableOnInteraction: false,

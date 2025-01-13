@@ -63,7 +63,7 @@ const Register = () => {
     }
 
   return (
-    <div className="py-28 flex justify-center items-center">
+    <div className="pt-10 pb-28 flex justify-center items-center">
       <div className="card bg-base-100 w-full max-w-xl shadow-2xl py-8">
         <form onSubmit={handleSubmit} className="card-body">
           <h2 className="text-4xl font-bold mb-4">Sign Up to Elex</h2>

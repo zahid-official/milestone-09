@@ -11,9 +11,11 @@ const About = () => {
         text={"Why Choose ELEX for Your Learning Journey?"}
       ></PageTitle>
 
-      <section className="py-28">
+      <section className="py-28 sm:px-5">
         <AboutSection></AboutSection>
       </section>
+
+      
       <FeedbackSection></FeedbackSection>
       <JoinSection></JoinSection>
     </div>

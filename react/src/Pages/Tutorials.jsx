@@ -1,5 +1,5 @@
 import PageTitle from "../Components/Learn/PageTitle";
-// import Videos from "../Components/Videos";
+import Videos from "../Components/Videos";
 
 const Tutorials = () => {
   return (
@@ -8,7 +8,7 @@ const Tutorials = () => {
         pageTitle={"Tutorials Point"}
         text={"Visual effects make learning engaging and easier to understand."}
       ></PageTitle>
-      {/* <Videos></Videos> */}
+      <Videos></Videos>
     </div>
   );
 };

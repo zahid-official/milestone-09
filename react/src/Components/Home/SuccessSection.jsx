@@ -16,13 +16,13 @@ const SuccessSection = () => {
     AOS.init({
       duration: 1200,
       easing: "ease",
-      once: true,
+      once: false,
     });
   }, []);
 
   return (
     <div>
-      <div className="hero pt-10 pb-28">
+      <div className="hero  overflow-x-hidden pt-10 pb-28">
         <div className="flex justify-between px-4 gap-8 flex-col lg:flex-row">
           <div  data-aos="fade-right" data-aos-duration="1600" className="flex-1">
             <img src={photo02} />

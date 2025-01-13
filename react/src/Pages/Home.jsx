@@ -8,25 +8,32 @@ import JoinSection from "../Components/Home/JoinSection";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
+import shape01 from "/assets/shape-01.svg";
+import shape02 from "/assets/shape-02.svg";
+import shape03 from "/assets/shape-03.svg";
+
 
 const Home = () => {
   useEffect(() => {
     AOS.init({
       duration: 1200,
       easing: "ease",
-      once: true,
+      once: false,
     });
   }, []);
 
   return (
-    <div>
+    <div className=" overflow-x-hidden">
       {/* Banner Section */}
-      <section data-aos="fade-left" data-aos-duration="1300">
+      <section>
         <Banner></Banner>
       </section>
 
       {/* About Section */}
-      <section>
+      <section className="sm:px-5 relative">
+        <div className="absolute -top-16 left-16 z-10 animate__animated animate__flash  animate__infinite	infinite my-element">
+          <img src={shape01} alt="" />
+        </div>
         <div data-aos="fade-up">
           <Title
             section={"About Elex"}
@@ -38,7 +45,10 @@ const Home = () => {
       </section>
 
       {/* Success Section */}
-      <section className="bg-[#eef5f7] mt-10">
+      <section className="bg-[#eef5f7] mt-10 relative">
+        <div className="absolute -top-24 right-16 z-10">
+          <img src={shape02} alt="" />
+        </div>
         <div data-aos="fade-up">
           <Title
             section={"Start To Success"}
@@ -50,7 +60,10 @@ const Home = () => {
       </section>
 
       {/* Feature Section */}
-      <section>
+      <section className="relative">
+        <div className="absolute top-20 left-28 z-10 animate__animated animate__flash  animate__infinite	infinite my-element">
+          <img src={shape03} alt="" />
+        </div>
         <div data-aos="fade-up">
           <Title
             section={"Our Features"}
@@ -67,7 +80,7 @@ const Home = () => {
       </section>
 
       {/* Join Us */}
-      <section  data-aos="fade-up" data-aos-duration="2000"> 
+      <section data-aos="fade-up" data-aos-duration="2000">
         <JoinSection></JoinSection>
       </section>
     </div>

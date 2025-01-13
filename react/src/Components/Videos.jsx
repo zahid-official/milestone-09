@@ -1,8 +1,10 @@
+import { Link } from "react-router-dom";
+
 const Videos = () => {
   return (
     <div className="grid gap-10 xl:grid-cols-3 lg:grid-cols-2 w-11/12 mx-auto py-28">
       {/* video-01 */}
-      <div>
+      <div className="border-2 px-5 py-6 rounded-2xl">
         <iframe
           width="100%"
           height="350px"
@@ -12,16 +14,19 @@ const Videos = () => {
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           referrerPolicy="strict-origin-when-cross-origin"
           allowFullScreen
+          className="rounded-xl"
         />
         <div className="mt-6">
-          <button className="btn custom-btn text-xl h-14 sm:px-16">
-            View more
-          </button>
+          <Link to={"/learn"}>
+            <button className="btn custom-btn text-lg h-14 ">
+              Learn Vocabularies
+            </button>
+          </Link>
         </div>
       </div>
 
       {/* video-02 */}
-      <div>
+      <div className="border-2 px-5 py-6 rounded-2xl">
         <iframe
           width="100%"
           height="350px"
@@ -31,16 +36,19 @@ const Videos = () => {
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           referrerPolicy="strict-origin-when-cross-origin"
           allowFullScreen
+          className="rounded-xl"
         />
         <div className="mt-6">
-          <button className="btn custom-btn text-xl h-14 sm:px-16">
-            View more
-          </button>
+          <Link to={"/learn"}>
+            <button className="btn custom-btn text-lg h-14 ">
+              Learn Vocabularies
+            </button>
+          </Link>
         </div>
       </div>
 
       {/* video-03 */}
-      <div>
+      <div className="border-2 px-5 py-6 rounded-2xl">
         <iframe
           width="100%"
           height="350px"
@@ -50,16 +58,19 @@ const Videos = () => {
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           referrerPolicy="strict-origin-when-cross-origin"
           allowFullScreen
+          className="rounded-xl"
         />
         <div className="mt-6">
-          <button className="btn custom-btn text-xl h-14 sm:px-16">
-            View more
-          </button>
+          <Link to={"/learn"}>
+            <button className="btn custom-btn text-lg h-14 ">
+              Learn Vocabularies
+            </button>
+          </Link>
         </div>
       </div>
 
       {/* video-04 */}
-      <div>
+      <div className="border-2 px-5 py-6 rounded-2xl">
         <iframe
           width="100%"
           height="350px"
@@ -69,16 +80,19 @@ const Videos = () => {
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           referrerPolicy="strict-origin-when-cross-origin"
           allowFullScreen
+          className="rounded-xl"
         />
         <div className="mt-6">
-          <button className="btn custom-btn text-xl h-14 sm:px-16">
-            View more
-          </button>
+          <Link to={"/learn"}>
+            <button className="btn custom-btn text-lg h-14 ">
+              Learn Vocabularies
+            </button>
+          </Link>
         </div>
       </div>
 
       {/* video-05 */}
-      <div>
+      <div className="border-2 px-5 py-6 rounded-2xl">
         <iframe
           width="100%"
           height="350px"
@@ -88,16 +102,19 @@ const Videos = () => {
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           referrerPolicy="strict-origin-when-cross-origin"
           allowFullScreen
+          className="rounded-xl"
         />
         <div className="mt-6">
-          <button className="btn custom-btn text-xl h-14 sm:px-16">
-            View more
-          </button>
+          <Link to={"/learn"}>
+            <button className="btn custom-btn text-lg h-14 ">
+              Learn Vocabularies
+            </button>
+          </Link>
         </div>
       </div>
 
       {/* video-06 */}
-      <div>
+      <div className="border-2 px-5 py-6 rounded-2xl">
         <iframe
           width="100%"
           height="350px"
@@ -107,16 +124,19 @@ const Videos = () => {
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           referrerPolicy="strict-origin-when-cross-origin"
           allowFullScreen
+          className="rounded-xl"
         />
         <div className="mt-6">
-          <button className="btn custom-btn text-xl h-14 sm:px-16">
-            View more
-          </button>
+          <Link to={"/learn"}>
+            <button className="btn custom-btn text-lg h-14 ">
+              Learn Vocabularies
+            </button>
+          </Link>
         </div>
       </div>
 
       {/* video-07 */}
-      <div>
+      <div className="border-2 px-5 py-6 rounded-2xl">
         <iframe
           width="100%"
           height="350px"
@@ -126,16 +146,19 @@ const Videos = () => {
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           referrerPolicy="strict-origin-when-cross-origin"
           allowFullScreen
+          className="rounded-xl"
         />
         <div className="mt-6">
-          <button className="btn custom-btn text-xl h-14 sm:px-16">
-            View more
-          </button>
+          <Link to={"/learn"}>
+            <button className="btn custom-btn text-lg h-14 ">
+              Learn Vocabularies
+            </button>
+          </Link>
         </div>
       </div>
 
       {/* video-08 */}
-      <div>
+      <div className="border-2 px-5 py-6 rounded-2xl">
         <iframe
           width="100%"
           height="350px"
@@ -145,16 +168,19 @@ const Videos = () => {
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           referrerPolicy="strict-origin-when-cross-origin"
           allowFullScreen
+          className="rounded-xl"
         />
         <div className="mt-6">
-          <button className="btn custom-btn text-xl h-14 sm:px-16">
-            View more
-          </button>
+          <Link to={"/learn"}>
+            <button className="btn custom-btn text-lg h-14 ">
+              Learn Vocabularies
+            </button>
+          </Link>
         </div>
       </div>
 
       {/* video-09 */}
-      <div>
+      <div className="border-2 px-5 py-6 rounded-2xl">
         <iframe
           width="100%"
           height="350px"
@@ -164,16 +190,19 @@ const Videos = () => {
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           referrerPolicy="strict-origin-when-cross-origin"
           allowFullScreen
+          className="rounded-xl"
         />
         <div className="mt-6">
-          <button className="btn custom-btn text-xl h-14 sm:px-16">
-            View more
-          </button>
+          <Link to={"/learn"}>
+            <button className="btn custom-btn text-lg h-14 ">
+              Learn Vocabularies
+            </button>
+          </Link>
         </div>
       </div>
 
       {/* video-10 */}
-      <div>
+      <div className="border-2 px-5 py-6 rounded-2xl">
         <iframe
           width="100%"
           height="350px"
@@ -183,16 +212,19 @@ const Videos = () => {
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           referrerPolicy="strict-origin-when-cross-origin"
           allowFullScreen
+          className="rounded-xl"
         />
         <div className="mt-6">
-          <button className="btn custom-btn text-xl h-14 sm:px-16">
-            View more
-          </button>
+          <Link to={"/learn"}>
+            <button className="btn custom-btn text-lg h-14 ">
+              Learn Vocabularies
+            </button>
+          </Link>
         </div>
       </div>
 
       {/* video-11 */}
-      <div>
+      <div className="border-2 px-5 py-6 rounded-2xl">
         <iframe
           width="100%"
           height="350px"
@@ -202,16 +234,19 @@ const Videos = () => {
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           referrerPolicy="strict-origin-when-cross-origin"
           allowFullScreen
+          className="rounded-xl"
         />
         <div className="mt-6">
-          <button className="btn custom-btn text-xl h-14 sm:px-16">
-            View more
-          </button>
+          <Link to={"/learn"}>
+            <button className="btn custom-btn text-lg h-14 ">
+              Learn Vocabularies
+            </button>
+          </Link>
         </div>
       </div>
 
       {/* video-12 */}
-      <div>
+      <div className="border-2 px-5 py-6 rounded-2xl">
         <iframe
           width="100%"
           height="350px"
@@ -221,11 +256,14 @@ const Videos = () => {
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           referrerPolicy="strict-origin-when-cross-origin"
           allowFullScreen
+          className="rounded-xl"
         />
         <div className="mt-6">
-          <button className="btn custom-btn text-xl h-14 sm:px-16">
-            View more
-          </button>
+          <Link to={"/learn"}>
+            <button className="btn custom-btn text-lg h-14 ">
+              Learn Vocabularies
+            </button>
+          </Link>
         </div>
       </div>
     </div>

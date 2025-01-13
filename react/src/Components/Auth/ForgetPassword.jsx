@@ -1,4 +1,4 @@
-import { useContext, useRef } from "react";
+import { useContext } from "react";
 import AuthContext from "./context";
 import { toast } from "react-toastify";
 
@@ -6,15 +6,15 @@ const ForgetPassword = () => {
   // useContext
   const { forget, resetEmail } = useContext(AuthContext);
   // useRef
-  const emailRef = useRef();
 
   // handleResetEmail
   const handleResetEmail = (event) => {
     event.preventDefault();
-    const email = emailRef.current.value;
+    const email = event.target.email.value;
     resetEmail(email)
       .then(() => {
-        window.location.href = "https://mail.google.com/";
+        toast.success("Reset Email Sent Successfully");
+        window.open("https://mail.google.com/", "_blank");
       })
       .catch((error) => toast.error(error.message));
   };
@@ -22,7 +22,7 @@ const ForgetPassword = () => {
   return (
     <div className="py-28 flex justify-center">
       <div className="card bg-base-100 w-full max-w-md py-10 shrink-0 shadow-2xl">
-        <form className="card-body">
+        <form onSubmit={handleResetEmail} className="card-body">
           <h2 className="text-4xl mb-5 font-bold">Reset Password</h2>
           <div className="form-control">
             <label className="label">
@@ -30,8 +30,8 @@ const ForgetPassword = () => {
             </label>
             <input
               type="email"
+              name="email"
               placeholder="email"
-              ref={emailRef}
               defaultValue={forget}
               className="input input-bordered"
               required
@@ -39,7 +39,6 @@ const ForgetPassword = () => {
           </div>
           <div className="form-control mt-6">
             <button
-              onClick={handleResetEmail}
               className="btn custom-btn text-lg font-bold h-14"
             >
               Reset Password

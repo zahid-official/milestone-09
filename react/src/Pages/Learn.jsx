@@ -19,7 +19,7 @@ const Learn = () => {
       </section>
 
       {/* Category */}
-      <section className="grid gap-10 xl:grid-cols-4 lg:grid-cols-3 sm:grid-cols-2 container sm:mx-auto px-4 py-28">
+      <section className="grid gap-10 xl:grid-cols-4 lg:grid-cols-3 sm:grid-cols-2 container sm:mx-auto px-4 pt-28 pb-5">
         {categories.map((category) => (
           <Category key={category.id} category={category}></Category>
         ))}

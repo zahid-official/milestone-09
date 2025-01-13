@@ -9,11 +9,11 @@ const FeedbackSection = () => {
     AOS.init({
       duration: 1200,
       easing: "ease",
-      once: true,
+      once: false,
     });
   }, []);
   return (
-    <div className="flex lg:flex-row flex-col gap-10 w-11/12 mx-auto py-16">
+    <div className="flex overflow-x-hidden lg:flex-row flex-col gap-10 w-11/12 mx-auto py-16">
       <div data-aos="zoom-in-right" className="flex-1">
         <img src={feedback} alt="" />
       </div>

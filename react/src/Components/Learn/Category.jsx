@@ -9,16 +9,16 @@ const Category = ({ category }) => {
     const {lesson_title, id} = category;
   return (
     <Link to={`/learn/lesson/${id}`}>
-      <div className="bg-[#eef5f7] text-[#186f7a] rounded-xl py-20 text-center px-5 hover:shadow-xl transition-all duration-300">
+      <div className="bg-[#eef5f7] text-[#186f7a] rounded-xl py-20 text-center px-5 hover:shadow-xl transition-all duration-300 my-lesson">
         <div className="flex justify-center relative">
           <img src={cover} alt="" />
           <span className="absolute top-4 left-[45%]"><PiCertificateDuotone size={45} color="white" /></span>
         </div>
         <div className="space-y-5 mt-4">
           <h2 className="text-3xl font-bold">{lesson_title}</h2>
-          <p className="flex items-center justify-center">
+          <span className="inline-flex items-center justify-center my-arrow">
           <FaRegArrowAltCircleRight size={38} />
-          </p>
+          </span>
         </div>
       </div>
     </Link>

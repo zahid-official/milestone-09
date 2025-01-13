@@ -24,7 +24,7 @@ const Lesson = () => {
         pageTitle={`We're Starting Lesson: ${id}`}
         text={"Read each word with care and perfect it through Practice."}
       ></PageTitle>
-      <div className="grid xl:grid-cols-4 lg:grid-cols-3 sm:grid-cols-2 gap-10 w-11/12 mx-auto px-4 py-28">
+      <div className="grid gap-10 2xl:grid-cols-4 lg:grid-cols-3 sm:grid-cols-2 container sm:mx-auto sm:px-0 px-4 py-28">
         {lesson.map((card) => (
           <Card key={card.id} card={card}></Card>
         ))}

@@ -6,6 +6,7 @@
 
 body{
     font-family: "Josefin Sans", sans-serif;
+    overflow-x: hidden;
 }
 
 a.active{
@@ -20,4 +21,39 @@ a.active{
 
 .custom-gradient{
     background-image: linear-gradient(to right bottom, #6bc17e, #0c8c97);;
+}
+
+.custom-card, .my-lesson{
+    transition: .5s;
+}
+.custom-card:hover, .my-lesson:hover{
+    transform: translateY(-20px);
+}
+
+.custom-card:hover p{
+    opacity: 0;
+    transition: .5s;
+}
+.custom-card span{
+    visibility: hidden;
+    cursor: pointer;
+    
+}
+.custom-card:hover span{
+    visibility: visible;
+    transform: translateY(-50px) scale(1.5);
+    transition: .5s;
+}
+.my-arrow{
+    transition: .7s;
+}
+.my-arrow:hover{
+    transform: scale(1.2);
+}
+
+.my-element {
+    --animate-duration: 25s;
+}
+.my-element2 {
+    --animate-duration: 30s;
 }

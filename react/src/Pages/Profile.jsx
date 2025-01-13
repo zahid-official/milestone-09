@@ -18,6 +18,7 @@ const Profile = () => {
         ></PageTitle>
       </section>
 
+      {/*  */}
       <section>
         <Title section={`Profile`} heading1={`Information`}></Title>
         <ProfileData></ProfileData>

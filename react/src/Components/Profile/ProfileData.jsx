@@ -10,7 +10,8 @@ const ProfileData = () => {
 
   return (
     <div className="flex justify-center items-center">
-      <div className="shadow-2xl max-w-md flex flex-col items-center  mb-32 p-10 rounded-2xl space-y-2 justify-center">
+      <div className="shadow-2xl max-w-md flex flex-col items-center mb-32 sm:p-10 p-8
+      rounded-2xl space-y-2 justify-center">
         <div className="mb-5">
           <img src={user?.photoURL} className="rounded-full" alt="" />
         </div>

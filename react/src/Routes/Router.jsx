@@ -39,7 +39,11 @@ const Router = createBrowserRouter([
       },
       {
         path: "/tutorials",
-        element: <Tutorials></Tutorials>,
+        element: (
+          <PrivateRoutes>
+            <Tutorials></Tutorials>
+          </PrivateRoutes>
+        ),
       },
       {
         path: "/about",
@@ -71,7 +75,7 @@ const Router = createBrowserRouter([
       },
       {
         path: "/forget",
-        element: <ForgetPassword></ForgetPassword>
+        element: <ForgetPassword></ForgetPassword>,
       },
     ],
   },

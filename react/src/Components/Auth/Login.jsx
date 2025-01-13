@@ -26,16 +26,15 @@ const Login = () => {
       .then((result) => {
         setUser(result.user);
         toast.success("Login Successful");
-        navigate(location?.state ? location.state : '/');
+        navigate(location?.state ? location.state : "/");
       })
       .catch((error) => toast.error(error.message));
   };
 
-
   // handle forget password
-   const handleForget = ()=> {
-    setForget(emailRef.current.value)
-   }
+  const handleForget = () => {
+    setForget(emailRef.current.value);
+  };
 
   // handleGoogle
   const handleGoogle = () => {
@@ -43,13 +42,13 @@ const Login = () => {
     google(googleProvider)
       .then(() => {
         toast.success("Sign In with Google Successful");
-        navigate(location?.state ? location.state : '/');
+        navigate(location?.state ? location.state : "/");
       })
       .catch((error) => toast.error(error.message));
   };
 
   return (
-    <div className="py-28 flex justify-center items-center">
+    <div className="pt-14 pb-28 flex justify-center items-center">
       <div className="card bg-base-100 w-full max-w-md shadow-2xl py-8">
         <form onSubmit={handleSubmit} className="card-body">
           <h2 className="text-4xl font-bold mb-4">Sign In to Elex</h2>
@@ -83,8 +82,14 @@ const Login = () => {
             />
 
             <label className="label">
-              <Link to={'/forget'} >
-                <button type="button" onClick={handleForget} className="label-text-alt link link-hover mt-2">Lost password?</button>
+              <Link to={"/forget"}>
+                <button
+                  type="button"
+                  onClick={handleForget}
+                  className="label-text-alt link link-hover mt-2"
+                >
+                  Lost password?
+                </button>
               </Link>
             </label>
           </div>
@@ -110,7 +115,9 @@ const Login = () => {
 
         <p className="text-center">
           {`Don't have an account?`}
-          <Link to={"/register"}><span className="underline">Sign up</span></Link>
+          <Link to={"/register"}>
+            <span className="underline">Sign up</span>
+          </Link>
         </p>
       </div>
     </div>

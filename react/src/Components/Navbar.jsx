@@ -21,7 +21,7 @@ const Navbar = () => {
         <NavLink to={"/"}>Home</NavLink>
       </li>
       <li className="text-lg font-semibold mx-0.5 hover:text-[#0683a2]">
-        <NavLink to={"/learn"}>Start Learning</NavLink>
+        <NavLink to={"/learn"}>Learn</NavLink>
       </li>
       <li className="text-lg font-semibold mx-0.5 hover:text-[#0683a2]">
         <NavLink to={"/tutorials"}>Tutorials</NavLink>
@@ -41,10 +41,10 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="navbar bg-base-100">
-        <div className="navbar-start">
-          <div className="dropdown">
-            <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
+      <div className="navbar p-0 justify-between bg-base-100">
+        <div>
+          <div className="dropdown z-10">
+            <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden sm:p-4 p-2">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-5 w-5"
@@ -68,37 +68,39 @@ const Navbar = () => {
             </ul>
           </div>
           <p>
-            <Link to="/" className="flex gap-3 items-center text-4xl font-bold">
+            <Link to="/" className="flex gap-1 items-center sm:text-4xl text-3xl font-bold">
               <img src={logo} alt="" /> <span className="mt-2">Elex</span>
             </Link>
           </p>
         </div>
-        <div className="navbar-center hidden lg:flex">
+        <div className=" hidden lg:flex">
           <ul className="menu menu-horizontal px-1">{links}</ul>
         </div>
 
-        <div className="navbar-end space-x-3">
+        <div className=" space-x-3">
           {user && user?.email ? (
             <>
-              <p className="text-xl font-bold">Hi, {user?.displayName}</p>
-              <img
-                className="h-10 rounded-full"
-                referrerPolicy="no-referrer"
-                src={user?.photoURL || user?.providerData?.photoURL}
-              />
+              <p className="text-lg font-bold sm:block hidden">
+                Hi, {user?.displayName}
+              </p>
+              <Link to={'/profile'}>
+                <img
+                  className="h-10 rounded-full"
+                  referrerPolicy="no-referrer"
+                  src={user?.photoURL || user?.providerData?.photoURL}
+                />
+              </Link>
 
               <button
                 onClick={handleSignOut}
-                className="btn custom-btn text-xl h-14 sm:px-10"
+                className="btn custom-btn text-lg h-12"
               >
                 Sign Out
               </button>
             </>
           ) : (
             <Link to={"/login"}>
-              <button className="btn custom-btn text-xl h-14 sm:px-16">
-                Login
-              </button>
+              <button className="btn custom-btn text-lg h-12">Login</button>
             </Link>
           )}
         </div>
