@@ -37,7 +37,7 @@ Gadgetix is powered by the latest web technologies to deliver a seamless, dynami
 ---
 
 ## 🔗 Live Demo:
-**Live Link:** [**https://elex.surge.sh**](#)
+**Live Link:** [**elex-official.netlify.app/**](#)
 
 ---
 
